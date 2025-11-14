@@ -1,104 +1,185 @@
-html{
-  scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Aston Script';
+  src: url('fonts/aston-script/astonscript.otf') format('truetype');
 }
 
 body {
-  background-color: #5e503f;
-  color: #eae0d5;
-  font-family: 'Playfair Display', serif;
-  font-size: larger;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0f;
+  color: #e6e6e6;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+}
+
+header h1 {
+  font-family: 'Aston Script', cursive;
+  font-size: 4rem;
+  color: #00d1ff;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  background: #0d0d15;
+}
+
+nav a {
+  color: #00d1ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.section {
+  padding: 70px 10%;
+  align-items: center;
 }
 
 h2 {
-  color: #0a0908;
-  letter-spacing: 1px;
-  text-align: center;
+  font-family: 'Aston Script', cursive;
+  font-size: 3rem;
+  color: #00d4ff;
   margin-bottom: 20px;
 }
 
-
-.full-page {
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.center {
-background-color: #70604c;
-max-width: 700px;
-margin: auto;
-padding: 1rem;
-transition: all 0.3s ease;
-border-radius: 8px;
+.about-container img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid #00d4ff;
 }
 
-:hover{
-  box-shadow: 0 0 15px rgba(167, 199, 231, 0.3);
+.about-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
-#education{
-   
-    margin: auto;
-    padding:1em;
+#education { padding-top: 40px; }
 
+.education-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  align-items: start;
 }
 
-h1 {
-margin-bottom: 0.3rem;
-font-weight: 600;
-
+.edu-item {
+  background: var(--card);
+  padding: 22px;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--mid);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
-
-nav a {
-margin: 0 10px;
-color: #0a0908;
-text-decoration: none;
-font-weight: 500;
+.edu-item h3 {
+  margin-bottom: 8px;
+  color: var(--mid);
+  font-size: 1.2rem;
 }
 
-
-nav a:hover {
-text-decoration: underline;
+.edu-item p {
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+  color: var(--deep);
+  font-size: 0.98rem;
 }
 
+.edu-item:hover {
+  transform: translateY(-6px);
+  background: var(--card-2);
+}
 
-.section {
-  min-height: 100vh;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  background: #11111c;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #1f1f2e;
+  transition: 0.3s ease;
+}
+
+.skill:hover {
+  border-color: #00d4ff;
+  transform: translateY(-5px);
+}
+
+.projects {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 60px 10%;
-  border-bottom: 1px solid #1e2533;
+  gap: 30px;
 }
-
-
-ul {
-list-style-type: circle;
-margin-left: 1.5rem;
-text-align: left;
-}
-
 
 .project {
-  background-color: #70604c;
-  border-radius: 10px;
+  background: #11111c;
   padding: 25px;
-  margin: 20px 0;
-  transition: all 0.3s ease;
+  border-radius: 15px;
+  border: 1px solid #1d1d2b;
+  transition: 0.3s ease;
 }
 
 .project:hover {
-  box-shadow: 0 0 15px rgba(167, 199, 231, 0.3);
+  border-color: #00d4ff;
+  transform: translateY(-5px);
+}
+
+.project a {
+  color: #00d4ff;
+  font-weight: 500;
+}
+
+.contact-box {
+  background: #11111c;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #1f1f2e;
+  width: fit-content;
+  justify-content: center;
+}
+
+.contact-box p {
+  font-size: 1.1rem;
+  margin:0 auto;
 }
 
 footer {
-text-align: center;
-font-size: 0.9rem;
-padding: 1.5rem;
-background: #e3d8f1;
-color: #2b2b2b;
-
+  text-align: center;
+  padding: 25px;
+  background: #0d0d15;
+  font-size: 0.9rem;
+  opacity: 0.6;
 }
+
