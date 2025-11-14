@@ -4,13 +4,14 @@ This is my personal portfolio website designed to showcase my details, education
 
 ## Technologies Used
 - HTML5
-- CSS3 (no JavaScript)
-- Playfair Display font
+- CSS3 
+- Aston script Display font
 
 ## Sections
 - Home
 - About Me
-- Education / Skills
+- Education
+- Skills
 - Projects / Portfolio
 - Contact
 
